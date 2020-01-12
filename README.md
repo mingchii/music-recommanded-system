@@ -2,6 +2,7 @@
 
 Recommendation engines are vital to many of today's most successful firms. The dataset contains three .csv files, obtained from the Million Song Dataset Project, of derived user ratings of songs based on each user's listening behavior. The goal of this project is to recommend specific songs to specific users. 
 
+
 Step 1: split training set and let it contains 84% of the observations. Validation set A to be used for tuning the collaborative filtering model, with 4% of the observations.Validation set B to be used for blending, with 4% of the observations. Testing set with 8% of the observations. 
 
 Step 2: use the Incomplete function in the softImpute package to construct an incomplete training set matrix. 
@@ -13,3 +14,8 @@ Step 4: use the function biScale in the softImpute package to fit the model  usi
 Step 5: show the out-of- sample performance of the fitted model on the previously constructed test set, including the values of test set MAE, RMSE, and the OSR^2 values. 
 
 ### collaborative filtering model
+We fit the low-rank collaborative filtering model on the training set previously determined value of k, and showed the test set MAE, RMSE, and the OSR^2 values. 
+
+Furthermore, we additionally incorporate some of the features associated with the songs. independent varaibles such as genre of the song, year of the song released. we have treat these variables as factor/ categorical variables and build the model using only the same training set as before. 
+
+On the final step, we use validation set B to perform blending of the collaborative filtering model. 
